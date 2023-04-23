@@ -1,0 +1,37 @@
+.cartWidget-container {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.cartWidget-container i {
+    font-size: 25px;
+}
+/*
+.cartWidget-container:hover {
+    background-color: black;
+}
+
+.cartWidget-container:hover i {
+    color: white;
+}
+*/
+.contador {
+    min-width: 15px;
+    min-height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 12px;
+} 
