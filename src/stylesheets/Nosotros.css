@@ -1,0 +1,19 @@
+.titulo-nosotros {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.banner {
+    display: block;
+    margin: 25px auto;
+}
+
+.texto {
+    text-align: justify;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.texto:first-of-type::first-letter {
+    font-size: 2rem;
+}

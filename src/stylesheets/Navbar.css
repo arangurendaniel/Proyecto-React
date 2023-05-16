@@ -1,13 +1,16 @@
 .navbar {
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     height: 75px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #fff;
     box-shadow: 0 3px 5px 1px gray;
-    position: absolute;
+    position: fixed;
     top: 0;
+    z-index: 1;
 }
 
 .logo-container {
@@ -15,9 +18,11 @@
     max-width: 150px;
 }
 
-.logo-container img {
-    width: 100%;
+.logo {
+    width: 110px;
+    height: 60px;
     cursor: pointer;
+    padding-top: 5px;
 }
 
 .links-conatiner {
@@ -25,6 +30,7 @@
     justify-content: space-around;
     flex: 0.5;
 }
+
 
 .links-conatiner li {
     cursor: pointer;
@@ -36,4 +42,42 @@
 .links-conatiner li:hover {
     background-color: black;
     color: #fff;
+}
+
+.contenedor-submenu {
+    position: relative;
+}
+
+.sub-menu {
+    position: absolute;
+    top: 100%;
+    background-color: black;
+    color: #fff;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.sub-menu li {
+    border-bottom: 1px solid white;
+    border-radius: 0;
+    text-align: center;
+}
+
+.sub-menu li:hover {
+    border: 1px solid black;
+    border-radius: 0;
+    background-color: #fff;
+    color: black;
+}
+
+
+nav ul ul {
+    height: 0;
+    overflow: hidden;
+}
+
+nav ul li:hover ul {
+    height: auto;
 }

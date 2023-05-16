@@ -1,0 +1,76 @@
+.ventana-producto {
+    width: 100%;
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 30px;
+}
+
+.contenedor-imagen-producto {
+    border-radius: 15px;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen-ventana-producto {
+    border-radius: 15px;
+    box-shadow: 0 3px 15px 1px rgba(0, 0, 0, 0.3);
+}
+
+.contenedor-detalle-producto {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.categoria-detalle {
+    color: gray;
+    font-size: .85rem
+}
+
+.codigo-detalle {
+    font-size: 1.2rem;
+}
+
+.codigo-detalle span {
+    font-weight: bold;
+}
+
+.detalle-nombre {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.detalle-descripcion {
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+.precio-detalle {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.boton-agregar {
+    width: 50%;
+    display: block;
+    padding: 15px;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 15px auto;
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 10px;
+}
+
+.boton-agregar:hover {
+    background-color: white;
+    color: black;
+
+}

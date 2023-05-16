@@ -1,43 +1,38 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import '../stylesheets/ItemListContainer.css'
 import ItemCard from './ItemCard';
+import data from '../data/data.json';
+import { useParams } from 'react-router-dom';
 
-function ItemListContainer(props) {
+
+function ItemListContainer() {
+
+  const [articulos, setArticulos] = useState([]);
+  const categoria = useParams().categoria
+  console.log(categoria); 
+
+  const llamarArticulos = () => {
+    return new Promise((resolve, reject) => {
+      resolve(data)
+    })
+  };
+
+  useEffect(() => {
+    llamarArticulos()
+    .then((resp) => {
+      if (categoria) {
+        setArticulos( resp.filter(art => art.categoria === categoria ) )
+      } else {
+        setArticulos(resp)
+      }
+    })
+    }, [categoria])
+  
   return (
-    <div>
-      <p style={{textAlign:'center', margin: '20px', fontSize: '2rem'}}>{props.greeting}</p>
-      <div className='item-list-container'>
-        <ItemCard 
-          archivo="coffee first"
-          nombre="Coffee First"
-          precio="1600"
-        />
-        <ItemCard 
-          archivo="frases"
-          nombre="Frases"
-          precio="1800"
-        />
-        <ItemCard 
-          archivo="simpsons"
-          nombre="Simpsons"
-          precio="1400"
-        />
-        <ItemCard 
-          archivo="frases 2"
-          nombre="Frases 2"
-          precio="1600"
-        />
-        <ItemCard 
-          archivo="memes"
-          nombre="Memes"
-          precio="1800"
-        />
-        <ItemCard 
-          archivo="stress"
-          nombre="Stress"
-          precio="1400"
-        />
-      </div>
+    <div className='item-list-container'>
+      {
+        articulos && articulos.map(articulo => ( <ItemCard key={articulo.id} articulo={articulo} />  ))
+      }
     </div>
   )
 }

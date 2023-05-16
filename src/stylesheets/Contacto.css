@@ -1,0 +1,59 @@
+.contact-form {
+    width: 80vw;
+    max-width: 500px;
+    margin: 15px auto;
+    padding: 15px; 
+}
+
+.sub-texto {
+    font-size: .85rem;
+    color: gray;
+    padding: 15px 0;
+}
+
+.contact-form label {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.2rem; 
+}
+.contact-form input {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    padding: 3px;
+    margin-top: 5px;
+    border-radius: 5px; 
+}
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    padding: 3px;
+    margin-top: 5px;
+    border-radius: 5px; 
+}
+  
+.enviar {
+    width: 60%;
+    margin: 15px auto;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 10px; 
+}
+.enviar:hover {
+      background-color: black;
+      color: white;
+      transition: 0.3s; 
+    }
+
+.funkos-contacto {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: .2;
+    object-fit: cover;
+}

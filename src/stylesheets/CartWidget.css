@@ -11,6 +11,7 @@
 
 .cartWidget-container i {
     font-size: 25px;
+    cursor: pointer;
 }
 /*
 .cartWidget-container:hover {

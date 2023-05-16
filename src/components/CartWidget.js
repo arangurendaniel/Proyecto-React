@@ -4,7 +4,7 @@ import '../stylesheets/CartWidget.css'
 function CartWidget() {
   return (
     <div className='cartWidget-container'>
-        <i class="bi bi-cart-fill"></i>
+        <i className="bi bi-cart-fill"></i>
         <div className='contador'>0</div>
     </div>
   )
